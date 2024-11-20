@@ -62,47 +62,41 @@ Git_Source_Control │ ├── Models │ ├── FileState │ │ ├─�
    - **Undo Commit**: Undo the last commit using `Undo()`.
    - **Request Review**: Initiate the review process by calling `RequestReview()`.
 
-## Example Code
-
-```csharp
-using Git_Source_Control.Models;
-using Git_Source_Control.Models.FileState;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        // Creating a new file
-        File file = new File("example.txt", "This is a new file.");
-
-        // Changing the file's state
-        file.ChangeState(new DraftState());
-        file.ChangeState(new StagedState());
-
-        // Committing the file
-        file.ChangeState(new CommittedState());
-
-        // Undoing the commit
-        file.Undo();
-    }
-}
-
-
-
 ## Design Patterns
-Command Pattern
-The ICommand interface defines methods like Execute() and Undo(). Each action (e.g., commit, merge) is encapsulated as a command. The FileCommand class is used to perform file-related operations such as committing changes.
 
-State Pattern
-The FileState class hierarchy defines various file states (e.g., DraftState, CommittedState). The File class changes its state by calling ChangeState() with a new state, enforcing the state transition rules.
+### Command Pattern
 
-Contributing
+The **Command Pattern** is used to encapsulate actions like commit, merge, and file state transitions into objects. This allows operations to be parameterized with different inputs, stored, and executed at a later time.
+
+- **ICommand Interface**: Defines the basic contract for all commands, with `Execute()` and `Undo()` methods.
+- **FileCommand Class**: Represents a command to modify the state of a file. This class executes the action on the file and allows for undoing that action.
+  
+By implementing the Command Pattern, actions such as committing changes, undoing commits, or changing file states can be tracked and reversed if needed.
+
+### State Pattern
+
+The **State Pattern** is used to manage the different states of a file (e.g., Draft, Staged, Committed). Instead of having complex conditionals in the `File` class, each state is represented by its own class that implements a common interface.
+
+- **FileState Class**: The base class that defines common operations for all states.
+- **Concrete State Classes (e.g., CommittedState, DraftState)**: Implement the state-specific behavior, such as transitions to other states.
+- **File Class**: Holds a reference to the current state and delegates the state-specific actions to the state objects. This allows the file to change its state dynamically without modifying the `File` class logic.
+
+The State Pattern makes it easier to manage the transitions between various stages in the file’s lifecycle and enforces rules about the allowed state transitions (for example, a file cannot skip review and jump directly to commit).
+
+## Contributing
+
 Feel free to fork the repository and submit pull requests with improvements, bug fixes, or new features. If you have any suggestions or issues, please open an issue in the GitHub repository.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
 
-Contact
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
 For any questions or feedback, feel free to open an issue or reach out to me directly via GitHub.
+
+---
+**Note**: This README is just a template and can be customized based on your specific needs and project details.
+
 
 
