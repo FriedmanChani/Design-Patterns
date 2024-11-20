@@ -1,0 +1,4 @@
+C:\Users\Owner\Desktop\Design Patterns Project\Git-Source-Control\obj\Debug\net8.0\Git-Source-Control.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Desktop\Design Patterns Project\Git-Source-Control\obj\Debug\net8.0\Git-Source-Control.AssemblyInfoInputs.cache
+C:\Users\Owner\Desktop\Design Patterns Project\Git-Source-Control\obj\Debug\net8.0\Git-Source-Control.AssemblyInfo.cs
+C:\Users\Owner\Desktop\Design Patterns Project\Git-Source-Control\obj\Debug\net8.0\Git-Source-Control.csproj.CoreCompileInputs.cache
