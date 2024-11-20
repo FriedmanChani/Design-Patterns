@@ -86,7 +86,7 @@ class Program
         file.Undo();
     }
 }
-Design Patterns:
+## Design Patterns:
 Command Pattern
 The ICommand interface defines methods like Execute() and Undo(). Each action (e.g., commit, merge) is encapsulated as a command. The FileCommand class is used to perform file-related operations such as committing changes.
 
