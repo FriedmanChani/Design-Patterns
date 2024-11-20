@@ -32,12 +32,11 @@ Git_Source_Control │ ├── Models │ ├── FileState │ │ ├─�
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/git-source-control-simulation.git
-    cd git-source-control-simulation
+    git clone https://github.com/FriedmanChani/Design-Patterns.git
+    cd Design-Patterns
     ```
 
 2. **Open the project in Visual Studio**:
-    Open `Git_Source_Control.sln` in Visual Studio.
 
 3. **Install dependencies**:
     The project uses .NET 8, which should already be installed if you're using the recommended version of Visual Studio. Otherwise, install the appropriate SDK version from the [official site](https://dotnet.microsoft.com/download/dotnet).
@@ -95,8 +94,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any questions or feedback, feel free to open an issue or reach out to me directly via GitHub.
 
----
-**Note**: This README is just a template and can be customized based on your specific needs and project details.
 
 
 
